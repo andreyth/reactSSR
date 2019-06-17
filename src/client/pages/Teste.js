@@ -1,12 +1,10 @@
 import React, { PureComponent } from 'react'
 import { connect } from 'react-redux'
-import { loadUsers } from 'client/ducks/teste'
-
-export const initData = loadUsers
+import { loadInit } from 'client/ducks/teste'
 
 class Teste extends PureComponent {
   componentDidMount () {
-    this.props.dispatch(initData())
+    this.props.dispatch(loadInit())
   }
 
   render () {
